@@ -1,5 +1,6 @@
 package edu.orangecoastcollege.cs273.caffeinefinder;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -81,6 +82,7 @@ public class CaffeineListActivity extends AppCompatActivity implements OnMapRead
     // TODO: CaffeineDetailsActivity class, sending it the selectedLocation the user picked from the locationsListView
 
     protected View viewLocationDetails(View view) {
-
+        startActivity(new Intent(this, ).putExtra("location", (Location)view.getTag()));
+        return view;
     }
 }
