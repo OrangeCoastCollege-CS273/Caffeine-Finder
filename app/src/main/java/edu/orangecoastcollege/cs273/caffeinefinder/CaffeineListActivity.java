@@ -41,7 +41,8 @@ public class CaffeineListActivity extends AppCompatActivity implements OnMapRead
 
         //TODO: (2) Load the support map fragment asynchronously
         //Instruct Android to load a Google Map into our fragment
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.caffeineMapFragment);
+        SupportMapFragment mapFragment =
+                (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.caffeineMapFragment);
         mapFragment.getMapAsync(this);
     }
 
@@ -82,7 +83,7 @@ public class CaffeineListActivity extends AppCompatActivity implements OnMapRead
     // TODO: CaffeineDetailsActivity class, sending it the selectedLocation the user picked from the locationsListView
 
     protected View viewLocationDetails(View view) {
-        startActivity(new Intent(this, ).putExtra("location", (Location)view.getTag()));
+        startActivity(new Intent(this, CaffeineDetailsActivity.class).putExtra("location", (Location)view.getTag()));
         return view;
     }
 }
